@@ -62,6 +62,8 @@ The code will automatically download the data 6h after the initial field. Hence,
 Since FengWu requires input in the shape of [69, 721, 1440], and the first 5 parameters are coming from the surface data. Therefore, the surface and upper data should be merged into one numpy file. The code will create an empty numpy file with the required shape [69, 721, 1440]. Then the first 5 parameters will be filled with the surface parameters in the required order. For upper data, the pressure levels should be flipped to the order of up to bottom, and in axis = 0 to ensure the latitude won't flip. The code then will fill the numpy file with upper variable data in the required order, and finally save it in the input_data file as the name of input1. The same operation for data 6h after.
 
 ## Inference
+The FengWu model could be downloaded from https://github.com/OpenEarthLab/FengWu
+
 The code allows the user to input a forecast time tick. However, since the FengWu model only provides a step in 6h, the time difference between the initial field and the terminal time field should be a multiple of 6.
 
 An output file will then be created for the output data.
