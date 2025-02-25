@@ -1,0 +1,10 @@
+cdsapi
+numpy
+netCDF4
+os
+datetime
+matplotlib
+xarray
+cartopy
+onnx==1.17.0
+onnxruntime-gpu==1.20.1
