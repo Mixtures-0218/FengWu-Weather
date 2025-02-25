@@ -23,7 +23,7 @@ The shape of import data is [69, 721, 1440], where 69 is the meteorological para
 
 ## Requirements
 ```
-pip install -r requirement_gpu.txt
+pip install -r requirement.txt
 ```
 ## File structure
 ```plain
