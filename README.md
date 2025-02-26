@@ -8,13 +8,13 @@ If you have questions, please contact leoluo@uw.edu
 ## Preparation
 Create an ECMWF account https://accounts.ecmwf.int/auth/realms/ecmwf/login-actions/registration?client_id=cms-www&tab_id=BSVdzoo7_xA and use it to sign in Climate Data Store (CDS) https://cds.climate.copernicus.eu
 
-Go to CDS to find your own API key https://cds.climate.copernicus.eu/how-to-api
+Go to CDS to find your own API url and key https://cds.climate.copernicus.eu/how-to-api
 
 Open the terminal and create a `.cdsapirc` file to save API info by running
 ```
  touch ~/.cdsapirc
 ```
-Open the `.cdsapirc` file by running the code below in your terminal.
+Open the `.cdsapirc` file by running the code below in your terminal, and paste the url and key into the file.
 ```
 nano ~/.cdsapirc
 ```
@@ -112,6 +112,8 @@ As the max and min values for each layer are not the same, we use a `for` loop t
 Note that here we present another projection method to take consideration of the curvature of the Earth by using `cartopy`. In this case, we don't use the `location.py` file to allow users to choose a specific region for visualization. The default code focuses on the Northwest Coast of North America, you could change the `projStr` variable and the variables below it to alter the visualization region.
 
 ![output_12_z500](https://github.com/user-attachments/assets/d6945aa3-afb5-4e70-97c8-79ee009dc6cd)
+
+Special thanks to Kyra Schlezinger kyras9@uw.edu for helping!
 
 ### 2m Wind visualization
 ```bash
