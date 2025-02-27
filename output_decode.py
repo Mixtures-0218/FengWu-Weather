@@ -66,7 +66,7 @@ def decode(file, file_name, file_path):
         nc_t2m.unit = "K"
         
         # Filling surface variables' values
-        nc_lon[:] = np.linspace(0.125,360,1440)
+        nc_lon[:] = np.linspace(0,360,1440)
         nc_lat[:] = np.linspace(90,-90,721)
         nc_u10[:] = u10
         nc_v10[:] = v10
