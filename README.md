@@ -19,7 +19,7 @@ Open the `.cdsapirc` file by running the code below in your terminal, and paste 
 nano ~/.cdsapirc
 ```
 ## Data Format
-The shape of import data is [69, 721, 1440], where 69 is the meteorological parameters with order [u10, v10, t2m, msl, z50, z100, ..., z1000, q50, q100, ..., q1000, t50, t100, ..., t1000]; 721x1440 is the latitude and longitude, lat from [90, -90] and lon from [0,360], with precision of 0.125 degrees. The required input files are needed for two consecutive time ticks with a gap of 6 hours.
+The shape of import data is [69, 721, 1440], where 69 is the meteorological parameters with order [u10, v10, t2m, msl, z50, z100, ..., z1000, q50, q100, ..., q1000, t50, t100, ..., t1000]; 721x1440 is the latitude and longitude, lat from [90, -90] and lon from [0,360], with precision of 0.25 degrees. The required input files are needed for two consecutive time ticks with a gap of 6 hours.
 
 ## Requirements
 ```
