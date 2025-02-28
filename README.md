@@ -1,7 +1,8 @@
 # FengWu-Weather
-This project is developed based on https://github.com/OpenEarthLab/FengWu and https://github.com/HaxyMoly/Pangu-Weather-ReadyToGo. Thank for the authors of the two projects above!
+This project is developed based on https://github.com/OpenEarthLab/FengWu and https://github.com/HaxyMoly/Pangu-Weather-ReadyToGo. Thank the authors of the two projects above!
 
-*The code is not official and may contain some potential mistakes! Do not use it in commercial and formal use!
+*The code is not official and may contain some potential mistakes! Do not use it for commercial or formal use!
+Special thanks to Prof. Alexandra Anderson-Frey!
 
 If you have questions, please contact leoluo@uw.edu
 
