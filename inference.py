@@ -21,7 +21,7 @@ while flag==0:
     if hour_diff % 6 != 0:
         print("The import time hour should be divisible by 6!")
     else:
-        loop = int(hour_diff / 6)
+        loop = int(hour_diff / 6) - 1
         flag = 1
 
 
