@@ -64,7 +64,7 @@ Since the input requires both surface and pressure level data, the data should b
 The code will automatically download the data 6h after the initial field. Hence, there will be 4 raw downloaded nc files in 2 time ticks.
 
 ### Convert nc file to numpy
-Since FengWu requires input in the shape of [69, 721, 1440], and the first 5 parameters are coming from the surface data. Therefore, the surface and upper data should be merged into one `.npy` file. The code will create an empty `.npy` file with the required shape [69, 721, 1440]. Then the first 5 parameters will be filled with the surface parameters in the required order. For upper data, the pressure levels should be flipped to the order of up to bottom, and in `axis = 0` to ensure the latitude won't flip. The code then will fill the `.npy` file with upper variable data in the required order, and finally save it in the input_data file as the name of input1. The same operation for data 6h after.
+Since FengWu requires input in the shape of [69, 721, 1440], and the first 5 parameters are coming from the surface data. Therefore, the surface and upper data should be merged into one `.npy` file. The code will create an empty `.npy` file with the required shape [69, 721, 1440]. Then the first 4 parameters will be filled with the surface parameters in the required order. For upper data, the pressure levels should be flipped to the order of up to bottom, and in `axis = 0` to ensure the latitude won't flip. The code then will fill the `.npy` file with upper variable data in the required order, and finally save it in the input_data file as the name of input1. The same operation for data 6h after.
 
 ## Inference
 The FengWu model can be downloaded from https://github.com/OpenEarthLab/FengWu
@@ -87,7 +87,7 @@ python output_decode.py
 ```
 The basic logic here is to convert the `.npy` file back to a `.nc` file in order to access it more easily. The precision of the data is in `.astype(np.float32)`.
 
-The code will first extract surface parameters in the required order and save them in a temporary variable. For upper data, since the parameters are too many (69-4=65) to write their names, we use a `for` loop to name all the parameters based on pressure levels and variables and use a dictionary to match them with indexes from `index = 4` (as the first 5 are the surface parameters) in the required order.
+The code will first extract surface parameters in the required order and save them in a temporary variable. For upper data, since the parameters are too many (69-4=65) to write their names, we use a `for` loop to name all the parameters based on pressure levels and variables and use a dictionary to match them with indexes from `index = 4` (as the first 4 are the surface parameters) in the required order.
 
 Create an empty nc file and fill in the variables and their units. For upper variables without specific temporary variables, we here use a for loop to temporarily store values of each upper-air parameter and give them the units based on their names according to the variable name list we created in the previous process. As we have multiple output `.npy` files, we use a `for` loop and function to deal with every file.
 
