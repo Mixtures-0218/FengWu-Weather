@@ -87,7 +87,7 @@ python output_decode.py
 ```
 The basic logic here is to convert the `.npy` file back to a `.nc` file in order to access it more easily. The precision of the data is in `.astype(np.float32)`.
 
-The code will first extract surface parameters in the required order and save them in a temporary variable. For upper data, since the parameters are too many (69-5=64) to write their names, we use a `for` loop to name all the parameters based on pressure levels and variables and use a dictionary to match them with indexes from `index = 4` (as the first 5 are the surface parameters) in the required order.
+The code will first extract surface parameters in the required order and save them in a temporary variable. For upper data, since the parameters are too many (69-4=65) to write their names, we use a `for` loop to name all the parameters based on pressure levels and variables and use a dictionary to match them with indexes from `index = 4` (as the first 5 are the surface parameters) in the required order.
 
 Create an empty nc file and fill in the variables and their units. For upper variables without specific temporary variables, we here use a for loop to temporarily store values of each upper-air parameter and give them the units based on their names according to the variable name list we created in the previous process. As we have multiple output `.npy` files, we use a `for` loop and function to deal with every file.
 
